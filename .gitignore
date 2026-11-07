@@ -1,0 +1,20 @@
+# Build artifacts
+builddir/
+*.o
+*.so
+*.so.*
+
+# Local test data (never commit biometric data)
+*.pgm
+*.png
+*.pcap
+*.pcapng
+*.bin
+*.log
+captures/
+*.bak
+
+# Editor / OS
+__pycache__/
+*.swp
+.DS_Store

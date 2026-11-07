@@ -1,0 +1,36 @@
+diff --git a/libfprint/fprint-list-udev-hwdb.c b/libfprint/fprint-list-udev-hwdb.c
+index 539f3e6..857eed3 100644
+--- a/libfprint/fprint-list-udev-hwdb.c
++++ b/libfprint/fprint-list-udev-hwdb.c
+@@ -149,7 +149,6 @@ static const FpIdEntry allowlist_id_table[] = {
+   { .vid = 0x1c7a, .pid = 0x0300 },
+   { .vid = 0x1c7a, .pid = 0x0575 },
+   { .vid = 0x1c7a, .pid = 0x0576 },
+-  { .vid = 0x1c7a, .pid = 0x0577 },
+   { .vid = 0x1c7a, .pid = 0x057e },
+   { .vid = 0x1c7a, .pid = 0x05a5 },
+   { .vid = 0x1c7a, .pid = 0x05aa },
+diff --git a/libfprint/meson.build b/libfprint/meson.build
+index f11533c..9e6b336 100644
+--- a/libfprint/meson.build
++++ b/libfprint/meson.build
+@@ -116,6 +116,7 @@ driver_sources = {
+     ),
+     'etes603' : files('drivers/etes603.c'),
+     'egis0570' : files('drivers/egis0570.c'),
++    'et577' : files('drivers/et577.c'),
+     'egismoc' : files('drivers/egismoc/egismoc.c'),
+     'egis_etu905' : files('drivers/egismoc/egis_etu905.c'),
+     'vfs0050' : files('drivers/vfs0050.c'),
+diff --git a/meson.build b/meson.build
+index ab09dc1..9c167d1 100644
+--- a/meson.build
++++ b/meson.build
+@@ -130,6 +130,7 @@ drivers_info = {
+     'vfs0050': { 'endian_dependent': true },
+     'etes603': {},
+     'egis0570': {},
++    'et577': {},
+     'egismoc': {},
+     'egis_etu905': {},
+     'vcom5s': {},
